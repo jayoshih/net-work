@@ -1,0 +1,46 @@
+@import "../../../../node_modules/bootstrap/less/bootstrap.less";
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+@icon-font-path: "/static/fonts/";
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("@{icon-font-path}OpenSans-Regular.ttf") format("truetype");
+}
+
+@background-color: #F5EFFB;
+@main-nav-color: #8682b0;
+@main-nav-height: 40px;
+
+body {
+	background-color: @background-color;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+#main-nav{
+	background-color:@main-nav-color;
+	width:100%;
+	height: @main-nav-height;
+
+	a, h4{
+		cursor:pointer;
+		height:100%;
+		padding:10px 20px;
+		font-size: 14pt;
+		color:white;
+	}
+	.icon-bar{
+		background-color:white;
+	}
+}
+
+.navbar-collapse{
+	background-color:@main-nav-color;
+}
