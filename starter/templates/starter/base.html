@@ -1,0 +1,31 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<html>
+  <head>
+    <title>
+      Foundation for Learning Equality
+    </title>
+
+  </head>
+
+  <body>
+	<div class="navbar navbar-default" role="navigation">
+		{% include "starter/header.html" %}
+	</div>
+	
+	<div>
+		{% include "starter/filters.html" %}    
+	</div>
+
+	<div class="movies_list">
+		<ul>
+		{% for movie in movie_list %}
+			<li>{% include "starter/list_item.html"%}<li>
+		{% endfor %} 
+		</ul>
+	</div>
+	
+  </body>
+</html>

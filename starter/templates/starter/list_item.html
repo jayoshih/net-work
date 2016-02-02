@@ -1,0 +1,50 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<div class = "movie_item">
+	<div class = "movie_poster">
+		<div class = "poster">
+			<img src="{{ movie.poster_set.last.link}}" alt="No Poster Found" style="width:100%; height:100%;">
+		</div>
+	</div>
+
+	<div class = "movie_details">
+		<div class="movie_title_container">
+		<div class="movie_float_right">
+				<a href="#" class="movie_btn">Seen It</a>
+				<a href="#" class="movie_btn">Recommend</a>
+				<a href="#" class="movie_btn">Add to Favorites</a>
+		</div>
+		<div class="movie_title">
+				{{ movie.title }}
+		</div>
+	</div>
+	
+	<div class="rating">
+		 {% for  i in "xxxxxxxxxx" %}
+			<span>☆</span>
+		 {% endfor %}
+
+		<ul>
+			<li><B>{{movie.mpaa_rating}} | {{movie.runtime}} min | {{movie.year}}</B></li>
+			<br/>
+			
+			{{movie.synopsis}}
+			
+			<br/>
+			<h5> <B>Abridged Cast </B></h5>
+			{% for character in movie.character_set.all %}
+				<li>{{ character.actor.name}} as <i>{{character.name}}</i></li>
+			{% endfor %}
+
+			<br/>
+			<B>Released</B>
+			{% for release in movie.releasedate_set.all %}
+				<li> {{ release.theater }}: {{ release.date }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+		<button class="btn detail_button" style="float:bottom;">View More Details</button>
+		<button class="btn detail_button" style="float:bottom;">Tickets & Showtimes</button>
+</div>

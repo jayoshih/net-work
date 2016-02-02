@@ -1,0 +1,12 @@
+Movie
+<h1>{{ movie.title }}</h1>
+<ul>
+	<li>{{movie.mpaa_rating}}</li>
+{% for character in movie.character_set.all %}
+    <li>{{ character.name }}</li>
+{% endfor %}
+{% for release in movie.releasedate_set.all %}
+    <li>{{ release.date }}</li>
+	<li>{{ release.theater }}</li>
+{% endfor %}
+</ul>

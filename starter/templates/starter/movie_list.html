@@ -1,0 +1,9 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<div class="movies_list">
+	{% for movie in movie_list %}
+    <li>{{ movie.title }}</li>
+{% endfor %}
+</div>

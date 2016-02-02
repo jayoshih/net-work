@@ -1,0 +1,76 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+
+<div class = "options">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+          <ul class = "filter_list">
+            <button type="submit" class="btn filter_btn">Recommendations</button>
+			<button type="submit" class="btn filter_btn">Friends</button>
+			<button type="submit" class="btn filter_btn">Calendar</button>
+			
+			
+			<hr style="border-top: dotted 2px; color: #D7D7D7" />
+			<li><B>Search Options:</B></li>
+			
+			<li class = "filter_label">Genre
+              <select  class="filter_dropdown">
+				<option><a href="#">All</a></option>
+				<option><a href="#">Action</a></option>
+                <option><a href="#">Adventure</a></option>
+				<option><a href="#">Animated</a></option>
+				<option><a href="#">Comedy</a></option>
+				<option><a href="#">Drama</a></option>
+				<option><a href="#">Fantasy</a></option>
+				<option><a href="#">Horror</a></option>
+				<option><a href="#">Sci-Fi</a></option>
+				<option><a href="#">Thriller</a></option>
+				<option><a href="#">War</a></option>
+              </select> 
+            </li>
+			
+			<li class = "filter_label">Rating
+              <select class="filter_dropdown">
+			  <option><a href="#">All</a></option>
+				<option><a href="#">G</a></option>
+                <option><a href="#">PG</a></option>
+				<option><a href="#">PG-13</a></option>
+				<option><a href="#">R</a></option>
+				<option><a href="#">Unrated</a></option>
+              </select> 
+            </li>
+
+			<li class="filter_label">Order 
+              <select class="filter_dropdown">
+				<option><a href="#">All</a></option>
+                <option><a href="#">Alphabetical</a></option>
+				<option><a href="#">Top Grossing</a></option>
+                <option><a href="#">Score</a></option>				
+				<option><a href="#">Release Date</a></option>				
+              </select> 
+			</li>
+			
+			<li class="filter_label">Show 
+              <select class="filter_dropdown">
+				<option><a href="#">All</a></option>
+                <option><a href="#">20 per page</a></option>
+                <option><a href="#">50 per page</a></option>
+				<option><a href="#">100 per page</a></option>
+              </select> 
+			</li>
+			
+			<li  class = "filter_label" ><input type="checkbox"> Favorites</input></li>
+			
+			<li  class = "filter_label" ><input type="checkbox"> Seen by Friends</input></li>
+			
+			<li class = "filter_label"><input type="checkbox"> In Theaters Only</input></li>
+			
+			<li class = "filter_label" ><input type="checkbox"> DVD Released</input></li>
+			
+			
+			<br/>
+	
+			<li><button type="submit" class="btn btn-default" style="float:right; margin-right:20px;">Search</button></li>
+			  
+          </ul>
+</div>
